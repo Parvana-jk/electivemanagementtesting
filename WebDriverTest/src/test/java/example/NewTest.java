@@ -18,7 +18,7 @@ public class NewTest {
 		}	
 		@BeforeTest
 		public void beforeTest() {	
-			System.setProperty("webdriver.gecko.driver","C:\\Users\\Parvana\\eclipse-workspace\\WebDriverTest\\src\\test\\java\\example\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver","\\usr\\local\\bin\\geckodriver.exe");
 		    driver = new FirefoxDriver(); 
 		    DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 		    capabilities.setCapability("marionette", true);
