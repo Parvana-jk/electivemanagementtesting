@@ -3,6 +3,7 @@ package example;
 import org.openqa.selenium.By;		
 import org.openqa.selenium.WebDriver;		
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;		
 import org.testng.annotations.Test;
@@ -21,6 +22,8 @@ public class NewTest {
 		}	
 		@BeforeTest
 		public void beforeTest() {	
+			FirefoxOptions firefoxOptions = new FirefoxOptions();
+			firefoxOptions.setHeadless(true);
 			
 			//System.setProperty("webdriver.gecko.driver","src/test/java/example/geckodriver.exe");
 		   // driver = new FirefoxDriver(); 
