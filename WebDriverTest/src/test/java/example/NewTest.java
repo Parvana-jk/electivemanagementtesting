@@ -5,7 +5,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;		
-import org.testng.annotations.Test;	
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 import org.testng.annotations.BeforeTest;	
 import org.testng.annotations.AfterTest;		
 public class NewTest {		
@@ -19,8 +22,10 @@ public class NewTest {
 		@BeforeTest
 		public void beforeTest() {	
 			
-			System.setProperty("webdriver.gecko.driver","src/test/java/example/geckodriver.exe");
-		    driver = new FirefoxDriver(); 
+			//System.setProperty("webdriver.gecko.driver","src/test/java/example/geckodriver.exe");
+		   // driver = new FirefoxDriver(); 
+			WebDriverManager.firefoxdriver().setup();
+			WebDriver driver = new FirefoxDriver();
 		    DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 		    capabilities.setCapability("marionette", true);
 		    
