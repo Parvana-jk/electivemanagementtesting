@@ -41,6 +41,19 @@ public class NewTest {
             Assert.assertTrue(title.contains("Parvana's Homepage"));
         
         }
+		@Test
+		public void testEasy3() {
+            driver.get("https://auems1.netlify.app/");
+            String title = driver.getTitle();
+            driver.findElement(By.id ("email")).sendKeys("cb.en.u4cse18042@cb.students.amrita.edu");   
+    	    
+    	    driver.findElement(By.id ("pwd")).sendKeys("login1") ;
+    	    
+    	    driver.findElement(By.id("Button")).submit();  
+    	    title = driver.getTitle();
+            Assert.assertTrue(title.contains("Login"));
+        
+        }
 		
 		@BeforeTest
 		public void beforeTest() {	
