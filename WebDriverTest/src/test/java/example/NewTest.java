@@ -25,7 +25,23 @@ public class NewTest {
             driver.get("https://auems1.netlify.app/");
             String title = driver.getTitle();
             Assert.assertTrue(title.contains("Login"));
+        
         }
+		@Test
+		
+		public void testEasy2() {
+            driver.get("https://auems1.netlify.app/");
+            String title = driver.getTitle();
+            driver.findElement(By.id ("email")).sendKeys("cb.en.u4cse18042@cb.students.amrita.edu");   
+    	    
+    	    driver.findElement(By.id ("pwd")).sendKeys("login") ;
+    	    
+    	    driver.findElement(By.id("Button")).submit();  
+    	    
+            Assert.assertTrue(title.contains("Parvana's Homepage"));
+        
+        }
+		
 		@BeforeTest
 		public void beforeTest() {	
 			FirefoxOptions firefoxOptions = new FirefoxOptions();
