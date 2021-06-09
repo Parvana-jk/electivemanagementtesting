@@ -37,7 +37,7 @@ public class NewTest {
     	    driver.findElement(By.id ("pwd")).sendKeys("login") ;
     	    
     	    driver.findElement(By.id("Button")).submit();  
-    	    
+    	    title = driver.getTitle();
             Assert.assertTrue(title.contains("Parvana's Homepage"));
         
         }
