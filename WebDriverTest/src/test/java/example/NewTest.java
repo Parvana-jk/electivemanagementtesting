@@ -33,14 +33,34 @@ public class NewTest {
             driver.get("https://auems1.netlify.app/");
             String title = driver.getTitle();
             driver.findElement(By.id ("email")).sendKeys("cb.en.u4cse18042@cb.students.amrita.edu");   
-    	    
+    	    try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
     	    driver.findElement(By.id ("pwd")).sendKeys("login") ;
+    	    try {
+				Thread.sleep(4000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				
     	    
     	    driver.findElement(By.id("Button")).submit();  
+    	    try {
+				Thread.sleep(4000);
+			} catch (InterruptedException e1) {
+				// TODO Auto-generated catch block
+			}
     	    title = driver.getTitle();
+    	    try {
+				Thread.sleep(4000);
+			} catch (InterruptedException e2) {
+				// TODO Auto-generated catch block
+			}
             Assert.assertTrue(title.contains("Parvana's Homepage"));
         
-        }
+        }}
 		@Test
 		public void testEasy3() {
             driver.get("https://auems1.netlify.app/");
