@@ -20,6 +20,12 @@ public class NewTest {
 			String title = driver.getTitle();				 
 			Assert.assertTrue(title.contains("Demo Guru99 Page")); 		
 		}	
+		@Test
+		public void testEasy1() {
+            driver.get("https://auems1.netlify.app/");
+            String title = driver.getTitle();
+            Assert.assertTrue(title.contains("Login"));
+        }
 		@BeforeTest
 		public void beforeTest() {	
 			FirefoxOptions firefoxOptions = new FirefoxOptions();
